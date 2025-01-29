@@ -99,8 +99,10 @@ def main(question: str, voice: str):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("question", type=str, help="The question to ask the LLM", default="What is the meaning of life?")
+    parser.add_argument("question", type=str, help="The question to ask the LLM", default="")
     parser.add_argument("--voice", type=str, help="The voice to use", default=VOICE_ID)
     args = parser.parse_args()
+    if not args.question:
+        args.question = input("What is the question you want to ask the LLM? ")
     filename = main(args.question, args.voice)
     print(f"Saved to {filename}")
