@@ -48,13 +48,19 @@ $env:ELEVENLABS_API_KEY="your_elevenlabs_api_key"
 Run the script with a question and an optional voice ID:
 
 ```sh
-uv run main.py "What is the meaning of life?"
+uv run main.py "I have x, y and z to do today, what should I do first?"
 ```
 
 You can also specify a custom voice:
 
 ```sh
-uv run main.py "Tell me a joke" --voice "your_voice_id"
+uv run main.py "I have an old app running Laravel 5.8, how do I upgrade it to Laravel 11?" --voice "your_elevenlabsvoice_id"
+```
+
+Or you can run the script without a question and it will prompt you for one:
+
+```sh
+uv run main.py
 ```
 
 ## Output
