@@ -1,0 +1,12 @@
+[project]
+name = "thoughts-to-speech"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "audioop-lts>=0.2.1",
+    "elevenlabs>=1.50.5",
+    "pydantic-ai>=0.0.20",
+    "pydub>=0.25.1",
+]
